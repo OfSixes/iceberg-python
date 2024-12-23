@@ -1141,6 +1141,9 @@ class Table:
     def update_spec(self, case_sensitive: bool = True) -> UpdateSpec:
         return UpdateSpec(Transaction(self, autocommit=True), case_sensitive=case_sensitive)
 
+    def replace_sort_order(self) -> UpdateSortOrder: #TODO
+
+
     def refs(self) -> Dict[str, SnapshotRef]:
         """Return the snapshot references in the table."""
         return self.metadata.refs
